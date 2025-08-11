@@ -2,15 +2,15 @@ import random
 def compc():
   game1=["S","W","G"]
   return random.choice(game1)
-
-var=compc()
+i1=10
 i=0
 comp_wins  =0
 user_wins =0
 draws =0
 invalid_input = 0
-while i<10 :
+while i<i1 :
     var = compc()
+    print(f"-----------------SNAKE WATER GUN GAME================= ")
     print("Enter your choice (S for Snake, W for Water, G for Gun):")
     user = input().upper()#so that if user enters lower case by mistake
     print(f"Computer chose: {var}")
@@ -27,6 +27,7 @@ while i<10 :
         print("INVALID INPUT")
         invalid_input=invalid_input+1
     i=i+1
+    print(f"No. of chances left : {i1-i}")
 print(f"Number of the computer wins : {comp_wins}")
 print(f"Number of times user wins: {user_wins}")
 print(f"Number of draws {draws}")
